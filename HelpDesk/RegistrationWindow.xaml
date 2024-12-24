@@ -1,0 +1,28 @@
+﻿<Window x:Class="HelpDesk.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelpDesk"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="450" Width="700" Background="White">
+    <Grid>
+
+        <TextBlock HorizontalAlignment="Center" FontSize="24" Margin="0,10,0,366" Background="#362c85" Width="742"></TextBlock>
+        <TextBlock HorizontalAlignment="Center" FontSize="24" Margin="0,10,0,318" Foreground="White">Регистрация</TextBlock>
+
+        <StackPanel Margin="325,39,10,0">
+            <Label Content="Логин:" Margin="86,80,0,0" Width="219"/>
+            <TextBox x:Name="tbLogin" HorizontalAlignment="Center" Width="140" Height="23" Background="#e91e63" Foreground="White" />
+            <Label Content="Пароль:" Margin="86,0,0,0" Width="223"/>
+            <PasswordBox x:Name="pbPassword" HorizontalAlignment="Center" Width="140" Height="23" Background="#e91e63" />
+
+            <Button Content="Ок" HorizontalAlignment="Center" Margin="0,40,0,0" Click="Button_Register_Click" Width="105" />
+            <Button Content="Назад" HorizontalAlignment="Center" Margin="0,10,0,0" Click="Button_Back_Click" Width="105" />
+        </StackPanel>
+
+        <Image Source="C:\Users\Admin\source\repos\HelpDesk\HelpDesk\Pictures\log.jpg" Margin="85,126,412,86" RenderTransformOrigin="0.546,0.737" />
+    </Grid>
+</Window>
+
+    

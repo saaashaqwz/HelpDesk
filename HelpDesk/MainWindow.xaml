@@ -1,0 +1,71 @@
+﻿<Window x:Class="HelpDesk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelpDesk"
+        mc:Ignorable="d"
+        Title="Окно администратора" Height="630" Width="800" Loaded="Window_Loaded" Background="#efefef">
+
+    <Grid>
+        
+        <DataGrid Name="BidDataGrid" HorizontalAlignment="Left" Height="226" AutoGenerateColumns="False" Margin="36,28,0,0" VerticalAlignment="Top" Width="425">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bid ID" Binding="{Binding Bid_ID}" />
+                <DataGridTextColumn Header="Purchase ID" Binding="{Binding Purchase_ID}" />
+                <DataGridTextColumn Header="FIO Client" Binding="{Binding ClientName}" />
+                <DataGridTextColumn Header="FIO Staff" Binding="{Binding StaffName}" />
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Margin="-76,24,80,-24">
+            <TextBox Name="tbBidId" Margin="565,35,0,0" Text="Id заявки" />
+        </Grid>
+        <Grid Margin="-76,24,142,358">
+            <TextBox Name="tbPurchaseId" Margin="565,65,0,0" Text="Id покупки"/>
+        </Grid>
+        <Grid Margin="-76,24,80,-24">
+            <TextBox Name="tbClientId" Margin="565,95,0,0" Text="Id клиента"/>
+        </Grid>
+        <Grid Margin="-76,24,80,-24">
+            <TextBox Name="tbStaffId" Margin="565,125,0,0" Text="Id сотрудника"/>
+        </Grid>
+        <Grid Margin="-76,24,80,-24">
+            <TextBox Name="tbAddress" Margin="565,155,0,0" Text="Адрес"/>
+        </Grid>
+        <Grid Margin="-76,24,80,-24">
+            <TextBox Name="tbStatusId" Margin="564,185,0,0" Text="Id статуса"/>
+        </Grid>
+
+        <Button Content="Добавить" Margin="676,80,0,0" Click="Button_Add_Click" />
+        <Button Content="Удалить" Margin="676,130,0,0" Click="Button_Delete_Click" />
+        <Button Content="Изменить" Margin="676,180,0,0" Click="Button_Update_Click" />
+
+        <!-- TextBox для фильтрации по ФИО клиента -->
+        <TextBox Name="tbFiltration" Margin="560,386,0,0" TextWrapping="Wrap" Text="" TextChanged="TextBox_TextChanged"/>
+
+        <!-- ComboBox для фильтрации по статусу заявки -->
+        <ComboBox Name="cbFiltration" Width="150" Height="22" Margin="560,414,0,0" SelectionChanged="cbFiltration_SelectionChanged">
+            <ComboBoxItem Content="Создан" />
+            <ComboBoxItem Content="В обработке" />
+            <ComboBoxItem Content="Завершен" />
+            <ComboBoxItem Content="Отменен" />
+        </ComboBox>
+
+        <!-- Кнопка для очистки фильтров -->
+        <Button Content="Сброс фильтра" Margin="586,456,0,0" Click="ClearFilters_Click" Width="98" RenderTransformOrigin="0.525,0.818"/>
+
+        <Button Content="Отчет по заявкам" Margin="100,534,0,0" Click="Button_BidPDF_Click" Width="120" RenderTransformOrigin="0.553,-0.199"/>
+        <Button Content="Отчет по клиентам" Margin="268,534,0,0" Click="Button_ClientPDF_Click" Width="120" RenderTransformOrigin="0.553,-0.199"/>
+
+        <TextBlock Margin="560,306,109,272">Выбор таблицы</TextBlock>
+        <ComboBox Name="comboBoxTables" Width="150" Height="22" Margin="560,331,0,0" SelectionChanged="comboBoxTables_SelectedIndexChanged"/>
+        <DataGrid Name="DataGridView" HorizontalAlignment="Left" Height="226" AutoGenerateColumns="True" Margin="36,284,0,0" VerticalAlignment="Top" Width="426">
+            <DataGrid.Columns>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

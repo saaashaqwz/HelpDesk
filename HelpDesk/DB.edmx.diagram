@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="08c20ba87d5f4fc282da74def82e46e0" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="Base_TitanModel.Bids" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Base_TitanModel.Clients" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Base_TitanModel.Posts" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Base_TitanModel.Products" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Base_TitanModel.Purchases" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Base_TitanModel.Roles" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Base_TitanModel.Services" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Base_TitanModel.Staffs" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Base_TitanModel.Statuses" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Base_TitanModel.Users" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="Base_TitanModel.FK__Bids__Address__3E1D39E1" ManuallyRouted="false" />
+        <AssociationConnector Association="Base_TitanModel.FK__Bids__Purchase_I__40058253" ManuallyRouted="false" />
+        <AssociationConnector Association="Base_TitanModel.FK__Bids__Staff_ID__3F115E1A" ManuallyRouted="false" />
+        <AssociationConnector Association="Base_TitanModel.FK__Bids__Status_ID__40F9A68C" ManuallyRouted="false" />
+        <AssociationConnector Association="Base_TitanModel.FK__Staffs__Post_ID__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Base_TitanModel.FK__Purchases__Produ__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="Base_TitanModel.FK__Purchases__Servi__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="Base_TitanModel.FK__Users__Role_ID__5EBF139D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
